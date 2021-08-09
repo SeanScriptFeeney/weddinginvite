@@ -87,7 +87,8 @@ p {line-height: 2}
   <h1>HOPE YOU CAN MAKE IT!</h1>
   <p class="w3-large">Kindly Respond by October, 2021</p>
   <p class="w3-xlarge">
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
+    <!--<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>-->
+    <button onclick="goToForms()" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
   </p>
 </div>
 
@@ -134,26 +135,30 @@ p {line-height: 2}
   }
   
 
-  function sendTheMail(rsvpState){
+//   function sendTheMail(rsvpState){
 
-    if (document.getElementById("full-names-input").value == "") 
-    {
-      return;
-    }
+//     if (document.getElementById("full-names-input").value == "") 
+//     {
+//       return;
+//     }
 
-    document.getElementById('id01').style.display='none';
-    var message = "";
-    if(rsvpState === 'going') 
-    {
-      message = document.getElementById("full-names-input").value + " will be attending the wedding.";
-    } else 
-    {
-      message = document.getElementById("full-names-input").value + " will not be able to attend the wedding.";
-    }
+//     document.getElementById('id01').style.display='none';
+//     var message = "";
+//     if(rsvpState === 'going') 
+//     {
+//       message = document.getElementById("full-names-input").value + " will be attending the wedding.";
+//     } else 
+//     {
+//       message = document.getElementById("full-names-input").value + " will not be able to attend the wedding.";
+//     }
 
-    window.open('mailto:seanandcharlenewedding@gmail.com?subject=Wedding RSVP from '
-     + document.getElementById("full-names-input").value
-     + '&body='+ message);
+//     window.open('mailto:seanandcharlenewedding@gmail.com?subject=Wedding RSVP from '
+//      + document.getElementById("full-names-input").value
+//      + '&body='+ message);
+//   }
+  function goToForms() 
+  {
+    window.open('https://forms.gle/Zxogis27FP2qCRC89', '_blank');
   }
 </script>
 </html>
